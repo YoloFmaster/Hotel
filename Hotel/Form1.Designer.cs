@@ -51,6 +51,7 @@
             this.rdDoubleRoom = new System.Windows.Forms.RadioButton();
             this.rdSingleRoom = new System.Windows.Forms.RadioButton();
             this.btnCalculation = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -216,7 +217,6 @@
             this.txtRate.ReadOnly = true;
             this.txtRate.Size = new System.Drawing.Size(100, 23);
             this.txtRate.TabIndex = 4;
-            this.txtRate.TextChanged += new System.EventHandler(this.txtRate_TextChanged);
             // 
             // txtPeriodOfStay
             // 
@@ -265,6 +265,7 @@
             this.rdTripleRoom.TabStop = true;
             this.rdTripleRoom.Text = "Triple Room";
             this.rdTripleRoom.UseVisualStyleBackColor = true;
+            this.rdTripleRoom.CheckedChanged += new System.EventHandler(this.rdTripleRoom_CheckedChanged);
             // 
             // rdDoubleRoom
             // 
@@ -276,6 +277,7 @@
             this.rdDoubleRoom.TabStop = true;
             this.rdDoubleRoom.Text = "Double Room";
             this.rdDoubleRoom.UseVisualStyleBackColor = true;
+            this.rdDoubleRoom.CheckedChanged += new System.EventHandler(this.rdDoubleRoom_CheckedChanged);
             // 
             // rdSingleRoom
             // 
@@ -288,6 +290,7 @@
             this.rdSingleRoom.TabStop = true;
             this.rdSingleRoom.Text = "Single Room";
             this.rdSingleRoom.UseVisualStyleBackColor = true;
+            this.rdSingleRoom.CheckedChanged += new System.EventHandler(this.rdSingleRoom_CheckedChanged);
             // 
             // btnCalculation
             // 
@@ -299,11 +302,22 @@
             this.btnCalculation.UseVisualStyleBackColor = true;
             this.btnCalculation.Click += new System.EventHandler(this.btnCalculation_Click);
             // 
+            // btnReset
+            // 
+            this.btnReset.Location = new System.Drawing.Point(578, 247);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(152, 34);
+            this.btnReset.TabIndex = 9;
+            this.btnReset.Text = "Reset";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 390);
+            this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnCalculation);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.txtFinalRate);
@@ -352,5 +366,6 @@
         private CheckBox ckBreakfast;
         private CheckBox ckElectricRefueling;
         private Button btnCalculation;
+        private Button btnReset;
     }
 }
